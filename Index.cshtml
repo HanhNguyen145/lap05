@@ -1,16 +1,15 @@
-﻿@model IEnumerable<BEWebApp.Models.Product>
+﻿@model IEnumerable<BEWebApp.Models.Category>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <style type="text/css">
-    table {
+    table{
         margin-left: auto;
         margin-right: auto;
         width: 900px;
     }
-
     #id_cat, #item_name {
         border: 1px solid lightgreen;
         border-radius: 10px;
@@ -19,78 +18,56 @@
         padding-bottom: 10px;
         color: darkgreen;
     }
-    .symbol{
-        display: flex;
-        margin-left: 450px;
-    }
-    
-    .symbol p{
+    #btn1, #btn2, #btn3, #btn4{
+        padding: 4px 15px 4px 15px;
+        background-color: white;
         border: 1px solid gray;
-        border-radius: 30px;
-        width: 45px;
-        height: 30px;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 18px;
-        color: blue;
-        padding-top:2px;
-        margin-right: 5px;
+        border-radius: 5px;
     }
 </style>
-<h2 id="id_cat">QUẢN LÝ HÀNG HÓA</h2>
+
+<h2 id="id_cat">QUẢN LÝ LOẠI HÀNG</h2>
 
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
-<div class="symbol">
-    <p>|<</p>
-    <p><<</p>
-    <p>>></p>
-    <p>>|</p>
-</div>
 <table class="table">
     <tr id="item_name">
         <th></th>
         <th>
-            MÃ HH
-            @*@Html.DisplayNameFor(model => model.NamePro)*@
+            @*@Html.DisplayNameFor(model => model.Id)*@
+            MÃ LOẠI
         </th>
         <th>
-            TÊN HH
-            @*@Html.DisplayNameFor(model => model.DecriptionPro)*@
-        </th>
-        <th>
-            ĐƠN GIÁ
-            @*@Html.DisplayNameFor(model => model.Price)*@
-        </th>
-        <th>
-            GIẢM GIÁ
-            @*@Html.DisplayNameFor(model => model.ImagePro)*@
-        </th>
-        <th>
-            LƯỢT XEM
-            @*@Html.DisplayNameFor(model => model.Category1.NameCate)*@
+            @*@Html.DisplayNameFor(model => model.NameCate)*@
+            TÊN LOẠI
         </th>
         <th></th>
     </tr>
     <tr>
         <td>
-            <input type="checkbox" name='name[]' id='check' />
+            <input type="checkbox" name='name[]' id='check'/>
+        </td>
+        <td>
+            1000
+        </td>
+        <td>
+            Đồng hồ đeo tay
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Xóa", "Delete", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" name='name[]' id='check'/>
         </td>
         <td>
             1001
         </td>
         <td>
-            Aniseed Syrup
-        </td>
-        <td>
-            $190.00
-        </td>
-        <td>
-            0%
-        </td>
-        <td>
-            5
+            Máy tính xách tay
         </td>
         <td>
             @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
@@ -99,22 +76,13 @@
     </tr>
     <tr>
         <td>
-            <input type="checkbox" name='name[]' id='check' />
+            <input type="checkbox" name='name[]' id='check'/>
         </td>
         <td>
             1002
         </td>
         <td>
-            Change
-        </td>
-        <td>
-            $19.00
-        </td>
-        <td>
-            0%
-        </td>
-        <td>
-            45
+            Máy ảnh
         </td>
         <td>
             @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
@@ -123,22 +91,13 @@
     </tr>
     <tr>
         <td>
-            <input type="checkbox" name='name[]' id='check' />
+            <input type="checkbox" name='name[]' id='check'/>
         </td>
         <td>
             1003
         </td>
         <td>
-            Aniseed Syrup 2018
-        </td>
-        <td>
-            $10.00
-        </td>
-        <td>
-            0%
-        </td>
-        <td>
-            1
+            Điện thoại
         </td>
         <td>
             @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
@@ -147,51 +106,125 @@
     </tr>
     <tr>
         <td>
-            <input type="checkbox" name='name[]' id='check' />
+            <input type="checkbox" name='name[]' id='check'/>
         </td>
         <td>
             1004
         </td>
         <td>
-            Chef Anton's Cajun Seasoning
-        </td>
-        <td>
-            $22.00
-        </td>
-        <td>
-            0%
-        </td>
-        <td>
-            25
+            Nước hoa
         </td>
         <td>
             @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Xóa", "Delete", null, new { @class = "btn btn-default" })
         </td>
     </tr>
+    <tr>
+        <td>
+            <input type="checkbox" name='name[]' id='check'/>
+        </td>
+        <td>
+            1005
+        </td>
+        <td>
+            Nữ trang
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Xóa", "Delete", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" name='name[]' id='check'/>
+        </td>
+        <td>
+            1006
+        </td>
+        <td>
+            Nón thời trang
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Xóa", "Delete", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" name='name[]' id='check'/>
+        </td>
+        <td>
+            1007
+        </td>
+        <td>
+            Túi xách du lịch
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Xóa", "Delete", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <input type="button" id="btn1" value="Chọn tất cả" />
+            <input type="button" id="btn2" value="Bỏ chọn tất cả" />
+            <input type="button" id="btn3" value="Xóa các mục chọn" />
+            <input type="button" id="btn4" value="Nhập thêm" />
+        </td>
+    </tr>
+    <script language="javascript">
 
+            // Chức năng chọn hết
+            document.getElementById("btn1").onclick = function ()
+            {
+                // Lấy danh sách checkbox
+                var checkboxes = document.getElementsByName('name[]');
+
+                // Lặp và thiết lập checked
+                for (var i = 0; i < checkboxes.length; i++){
+                    checkboxes[i].checked = true;
+                }
+            };
+
+            // Chức năng bỏ chọn hết
+            document.getElementById("btn2").onclick = function ()
+            {
+                // Lấy danh sách checkbox
+                var checkboxes = document.getElementsByName('name[]');
+
+                // Lặp và thiết lập Uncheck
+                for (var i = 0; i < checkboxes.length; i++){
+                    checkboxes[i].checked = false;
+                }
+            };
+
+             // Chức năng bỏ chọn 
+            document.getElementById("btn3").onclick = function ()
+            {
+                // Lấy danh sách checkbox
+                var checkboxes = document.getElementsByName('name[]');
+
+                // Lặp và thiết lập Uncheck
+                for (var i = 0; i < checkboxes.length; i++){
+                    if (checkboxes[i].checked = true) {
+                        checkboxes[i].checked = false;
+                    }
+                }
+            };
+    </script>
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NamePro)
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DecriptionPro)
+                @Html.DisplayFor(modelItem => item.NameCate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagePro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category1.NameCate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDCate }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IDCate }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDCate })
             </td>
         </tr>
     }
